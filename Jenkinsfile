@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SSH_CREDENTIALS_ID = 'mysite'
+        SSH_CREDENTIALS_ID = 'site'
         SERVER_IP = 'ec2-54-152-195-130.compute-1.amazonaws.com'
         REMOTE_USER = 'ubuntu'
         GITHUB_REPO_URL = 'https://github.com/Mutuwa99/thato_pro.git'
