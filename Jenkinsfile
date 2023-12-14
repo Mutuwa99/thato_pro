@@ -5,7 +5,7 @@ pipeline {
         SSH_CREDENTIALS_ID = 'mysite' // Replace with your actual SSH credentials ID
         SERVER_IP = 'ec2-54-152-195-130.compute-1.amazonaws.com'
         REMOTE_USER = 'ubuntu' // Change this to the appropriate non-root user
-        GITHUB_REPO_URL = 'https://github.com/Mutuwa99/thato_pro'
+        GITHUB_REPO_URL = 'https://github.com/Mutuwa99/thato_pro.git'
     }
 
     stages {
