@@ -27,7 +27,9 @@ pipeline {
                     // Use SSH credentials to test the connection
                     withCredentials([file(credentialsId: SSH_CREDENTIALS_ID, variable: 'SSH_KEY')]) {
                         sh "ssh-keyscan -H ${SERVER_IP} >> ~/.ssh/known_hosts"
-                        sh "ssh -i \$SSH_KEY -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 'echo Connection successful'"
+                        // sh "ssh -i \$SSH_KEY -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 'echo Connection successful'"
+                        sh "ssh -i ${SSH_KEY} -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 'echo Connection successful'"
+
                     }
                 }
             }
