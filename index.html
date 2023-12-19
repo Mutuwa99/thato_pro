@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ddWelcomsse to Thato's Page</title>
+    <title>Simple Web Page</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            text-align: center;
-            margin: 50px;
+            font-size: 16px;
+            background-color: #f4f4f4;
         }
 
         h1 {
-            color: #333;
+            color: #ff0000;
         }
 
-        h4 {
-            color: #007BFF;
+        button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004400;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to</h1>
-    <h4>Thato's Page</h4>
+    <h1>Hello, World!</h1>
+    <p>This is a simple webpage.</p>
+    <button onclick="showAlert()">Click me</button>
+    <script>
+        // This function has a vulnerability (XSS) as it directly uses user input in the alert message.
+        function showAlert() {
+            var userInput = prompt('Enter something:');
+            alert('You entered: ' + userInput);
+        }
+
+        // The following code contains a duplication
+        console.log('Hello, World!');
+        console.log('Hello, World!');
+    </script>
 </body>
 </html>
